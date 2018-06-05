@@ -1,0 +1,8 @@
+{
+  "name": "Checkbox Unicorn",
+  "version": "0.1",
+  "description": "Marketing checkbox checker",
+  "permissions": [ "background", "tts" ],
+  "background": { "scripts": ["unicorn.js"] },
+  "manifest_version": 2
+}
