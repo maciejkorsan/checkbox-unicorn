@@ -9,5 +9,6 @@
     "css": ["unicorn.css"]
   }], 
   "options_page": "options.html",
-  "manifest_version": 2 
+  "icons": { "128": "assets/unicorn_128.png" },
+  "manifest_version": 2
 }
