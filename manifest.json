@@ -2,7 +2,11 @@
   "name": "Checkbox Unicorn",
   "version": "0.1",
   "description": "Marketing checkbox checker",
-  "permissions": [ "background", "tts" ],
-  "background": { "scripts": ["unicorn.js"] },
+  "permissions": [ "tts", "tabs" ],  
+  "content_scripts": [{ 
+    "matches": ["<all_urls>"],
+    "js": ["unicorn.js"],
+    "css": ["unicorn.css"]
+  }],
   "manifest_version": 2
 }
