@@ -1,7 +1,9 @@
 .unicorn-negative {
     background-color: red !important;
+    color: #fff!;
 }
 
 .unicorn-positive {
     background-color: green !important;
+    color: #fff!;
 }
