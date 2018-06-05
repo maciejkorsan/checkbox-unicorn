@@ -21,24 +21,39 @@ class CheckboxUnicorn {
             const checkboxId = checkboxes[i].getAttribute("id")
             const checkboxLabel = document.querySelector(`label[for=${checkboxId}]`)
 
-            this.searchInLabel(checkboxLabel)
+            if (!checkboxLabel || !checkboxLabel.innerText) {
+                const childNodes = checkboxes[i].parentNode.children
+                console.log(childNodes)
+
+                for (let y = 0; y < childNodes.length; y++) {
+                    if (childNodes[y].innerText) {
+                        this.searchInLabel(childNodes[y])
+                    } 
+                }
+            } else {
+                this.searchInLabel(checkboxLabel)
+            }
         }
     }
 
     searchInLabel(label) {
         const labelText = label.innerText
 
-        if (!this.checkGlossary(labelText, "negative")) {
+        console.log(this.checkGlossary(labelText, "negative"))
+
+        if (this.checkGlossary(labelText, "negative")) {
             label.classList.add("unicorn-negative")
-        } else if (!this.checkGlossary(labelText, "positive")) {
+        } else if (this.checkGlossary(labelText, "positive")) {
             label.classList.add("unicorn-positive")
         }
     }
 
     checkGlossary(text, value) {
-        glossary[value].some(function(item) {
-            return text.indexOf(item) === -1
-        })
+        function checkArray(item) {
+            return text.indexOf(item) !== -1
+        }
+
+        glossary[value].some(checkArray)
     }  
     
 }
