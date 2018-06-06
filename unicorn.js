@@ -68,7 +68,7 @@ class CheckboxUnicorn {
   searchInLabel(label) {
     const labelText = label.innerText;
 
-    if (this.checkGlossary(labelText, "negative")) {
+    if (this.checkGlossary(labelText, "negative") && !this.checkGlossary(labelText, "positive")) {
       label.classList.add("unicorn-negative");
       return true;
     } else if (this.checkGlossary(labelText, "positive")) {
