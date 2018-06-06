@@ -1,9 +1,11 @@
-let angryUnicorn = false;
+window.onload = function(){
+  let angryUnicorn = false;
 
 let glossary = {
   positive: ["opt out", "opt-out"],
   negative: [
     "contact",
+    "consultant",
     "telephone",
     "phone",
     "e-mail",
@@ -21,7 +23,11 @@ let glossary = {
     "tekstmelding",
     "telefon",
     "tilbud",
-    "nyhetsbrev"
+    "nyhetsbrev",
+    "kontakt",
+    "konsulent",
+    "kundeklubben",
+    "klubben"
   ]
 };
 
@@ -45,17 +51,19 @@ class CheckboxUnicorn {
       }
       if (angryUnicorn && value) {
         checkboxes[i].addEventListener("click", () => {
-          const element = document.createElement(`img`);
-          element.setAttribute(
-            "class", "checkbox-angry-unicorn"
-          );
-          const url = chrome.extension.getURL("assets/angry.png");
-          element.setAttribute("src", url);
-          document.querySelector("body").appendChild(element);
+          if (checkboxes[i].checked) {
+            const element = document.createElement(`img`);
+            element.setAttribute(
+              "class", "checkbox-angry-unicorn"
+            );
+            const url = chrome.extension.getURL("assets/angry.png");
+            element.setAttribute("src", url);
+            document.querySelector("body").appendChild(element);
 
-          const audio = document.createElement(`audio`);
-          audio.setAttribute('src', chrome.extension.getURL("assets/roar.mp3"));
-          audio.play()
+            const audio = document.createElement(`audio`);
+            audio.setAttribute('src', chrome.extension.getURL("assets/roar.mp3"));
+            audio.play()
+          }          
         });
       }
     }
@@ -108,3 +116,6 @@ chrome.storage.local.get("goodWords", function(result) {
     });
   });
 });
+};
+
+
