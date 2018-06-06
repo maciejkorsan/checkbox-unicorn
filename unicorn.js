@@ -10,7 +10,18 @@ let glossary = {
     "email",
     "mail",
     "marketing",
-    "terms"
+    "terms",
+    "e-post",
+    "SMS",
+    "offer",
+    "offers",
+    "newsletter",
+    "newsletters",
+    "markedsføring",
+    "tekstmelding",
+    "telefon",
+    "tilbud",
+    "nyhetsbrev"
   ]
 };
 
