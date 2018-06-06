@@ -1,4 +1,5 @@
-let angryUnicorn = false;
+window.onload = function(){
+  let angryUnicorn = false;
 
 let glossary = {
   positive: ["opt out", "opt-out"],
@@ -113,3 +114,6 @@ chrome.storage.local.get("goodWords", function(result) {
     });
   });
 });
+};
+
+
