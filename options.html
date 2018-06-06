@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Checkbox Unicorn Options</title>
-    <style>
-      @keyframes info {
-        0% { 
-          top: -40px;
-        }
-        15% {
-          top: 0px;
-        }
-        85% {
-          top: 0px;
-        }
-        100% {
-          top: -40px;
-        }
+
+<head>
+  <title>Checkbox Unicorn Options</title>
+
+  <meta charset="utf-8" />
+  <style>
+    @keyframes info {
+      0% {
+        top: -40px;
       }
-      @keyframes unicorn {
-        0% {
-          transform: scale(1)
-        }
-        50% {
-          transform: scale(1.1)
-        }
-        100% {
-          transform: scale(1)
-        }
+      15% {
+        top: 0px;
       }
-      * {
-        box-sizing: border-box;
+      85% {
+        top: 0px;
       }
-      html, body {
-        margin: 0;
-        padding: 15px;
+      100% {
+        top: -40px;
       }
+    }
+
+@keyframes unicorn {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(1.1)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+
+
+    @keyframes loveAnimation {
+      0% {
+        transform: scale(1)
+      }
+      50% {
+        transform: scale(1.5)
+      }
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 15px;
+    }
+
     body {
       background: #251721
     }
+
     input {
       margin: 5px;
       outline: none;
     }
+
     .form {
       text-align: center;
       max-width: 640px;
       margin: 0 auto;
     }
+
     .logo {
       width: 128px;
       height: 128px;
       margin-bottom: 20px;
     }
+
     .logo:hover {
       animation: unicorn 1s linear infinite;
     }
+
     .submit {
       margin: 20px auto 0;
       display: inline-block;
       border: none;
-      background: rgba(140,3,67,0.7);
+      background: rgba(140, 3, 67, 0.7);
       color: #fff;
       transition: all 0.3s ease-in;
       padding: 12px 15px;
@@ -67,9 +94,11 @@
       cursor: pointer;
       outline: none;
     }
+
     .submit:hover {
-      background: rgba(140,3,67,1);
+      background: rgba(140, 3, 67, 1);
     }
+
     .words {
       display: block;
       background: #fefefe;
@@ -82,6 +111,7 @@
       resize: none;
       outline: none;
     }
+
     .saved {
       position: fixed;
       top: -40px;
@@ -94,108 +124,149 @@
       justify-content: center;
       align-items: center;
     }
+
     .saved--visible {
       opacity: 1;
     }
+
     .saved--visible {
       animation: info 3s linear;
     }
+
     h2 {
       margin-top: 40px;
       color: #fefefe;
       font-weight: normal;
     }
+
     /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-right: 15px;
-}
 
-/* Hide default HTML checkbox */
-.switch input {display:none;}
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin-right: 15px;
+    }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+    /* Hide default HTML checkbox */
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+    .switch input {
+      display: none;
+    }
 
-input:checked + .slider {
-  background-color: #13C5AB;
-}
+    /* The slider */
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #13C5AB;
-}
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
+    input:checked+.slider {
+      background-color: #13C5AB;
+    }
 
-.slider.round:before {
-  border-radius: 50%;
-}
+    input:focus+.slider {
+      box-shadow: 0 0 1px #13C5AB;
+    }
 
-.checkbox {
-  display: flex;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-}
-    </style>
-  </head>
+    input:checked+.slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
 
-  <body>
-    <div class="saved">Words list has been updated!</div>
-    <form>
-      <div class="form">
-        <img src="assets/unicorn_256.png" class="logo"/>
-        <div class="checkbox">
-          <label class="switch switch--js">
-            <input class="checkbox--js" type="checkbox">
-            <span class="slider round"></span>
-          </label>
-          <span class="angry">ANGRY UNICORN MODE</span>
-        </div>
-        <h2>Bad words</h2>
-        <textarea class="words bad-words--js"></textarea>
-        <h2>Good words</h2>
-        <textarea class="words good-words--js"></textarea>
-        <button class="submit submit--js">Save the words</button>
+    /* Rounded sliders */
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .checkbox {
+      display: flex;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .disclaimer {
+      margin-top: 40px;
+      font-size: 10px;
+      line-height: 16px;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .disclaimer a {
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .love {
+      color: #ff0000;
+      display: inline-block;
+      animation: loveAnimation 2s ease-in-out infinite;
+      margin: 0 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="saved">Words list has been updated!</div>
+  <form>
+    <div class="form">
+      <img src="assets/unicorn_256.png" class="logo" />
+      <div class="checkbox">
+        <label class="switch switch--js">
+          <input class="checkbox--js" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <span class="angry">ANGRY UNICORN MODE</span>
       </div>
-    </form>
-  </body>
-  <script src="default.js"></script>
-  <script src="options.js"></script>
-</html>
+      <h2>Bad words</h2>
+      <textarea class="words bad-words--js"></textarea>
+      <h2>Good words</h2>
+      <textarea class="words good-words--js"></textarea>
+      <button class="submit submit--js">Save the words</button>
+    </div>
+  </form>
+  <div class="disclaimer">
+    Images taken from
+    <a href="https://flaticon.com" target="_blank">flaticon</a>
+    <br/> Created with
+    <span class="love">&#10084;</span> in Oslo during the Hacklag Legal Impact Hackathon by
+    <a href="https://instagram.com/grubachybaryba" target="_blank">Agata Lisowska</a> &amp;
+    <a href="https://twitter.com/maciejkorsan" target="_blank">Maciej Korsan</a> with a great support of <a href="https://instagram.com/sugubina" target="_blank">Karolina Jabłońska-Korsan</a> &amp; Ewelina Piotrowska<br/>
+    Source code can be found <a href="https://github.com/maciejkorsan/checkbox-unicorn">here</a><br/><br/>
+    No unicorns were harmed during the development of this extension.
+  </div>
+</body>
+<script src="default.js"></script>
+<script src="options.js"></script>
 
+</html>
