@@ -4,6 +4,7 @@ let glossary = {
   positive: ["opt out", "opt-out"],
   negative: [
     "contact",
+    "consultant",
     "telephone",
     "phone",
     "e-mail",
@@ -21,7 +22,9 @@ let glossary = {
     "tekstmelding",
     "telefon",
     "tilbud",
-    "nyhetsbrev"
+    "nyhetsbrev",
+    "kontakt",
+    "konsulent"
   ]
 };
 
