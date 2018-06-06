@@ -7,12 +7,12 @@
     }
 }
 
-.unicorn-negative {
+.unicorn-negative, .unicorn-negative * {
     background-color: rgb(255, 0, 0, 0.8) !important;
     color: #fff !important;
 }
 
-.unicorn-positive {
+.unicorn-positive, .unicorn-positive * {
     background-color: rgba(0, 255, 0, 0.8) !important;
     color: #fff !important;
 }
