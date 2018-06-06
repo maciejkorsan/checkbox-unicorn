@@ -14,11 +14,6 @@ let glossary = {
   ]
 };
 
-let dictionary = {
-  positive: [],
-  negative: []
-};
-
 class CheckboxUnicorn {
   init() {
     console.log(glossary);
