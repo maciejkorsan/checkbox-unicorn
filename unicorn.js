@@ -25,7 +25,9 @@ let glossary = {
     "tilbud",
     "nyhetsbrev",
     "kontakt",
-    "konsulent"
+    "konsulent",
+    "kundeklubben",
+    "klubben"
   ]
 };
 
