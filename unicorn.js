@@ -12,7 +12,6 @@ let glossary = {
     "email",
     "mail",
     "marketing",
-    "terms",
     "e-post",
     "SMS",
     "offer",
@@ -24,10 +23,7 @@ let glossary = {
     "telefon",
     "tilbud",
     "nyhetsbrev",
-    "kontakt",
-    "konsulent",
-    "kundeklubben",
-    "klubben"
+    "kontakt"   
   ]
 };
 
