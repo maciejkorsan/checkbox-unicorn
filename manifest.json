@@ -11,7 +11,7 @@
     "js": ["unicorn.js"],
     "css": ["unicorn.css"]
   }], 
-  "web_accessible_resources": ["assets/angry.png"],
+  "web_accessible_resources": ["assets/angry.png", "assets/roar.mp3"],
   "options_page": "options.html",
   "icons": { "128": "assets/unicorn_128.png" },
   "manifest_version": 2

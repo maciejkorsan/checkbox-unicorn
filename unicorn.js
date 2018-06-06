@@ -36,12 +36,15 @@ class CheckboxUnicorn {
         checkboxes[i].addEventListener("click", () => {
           const element = document.createElement(`img`);
           element.setAttribute(
-            "style",
-            "position: fixed; bottom: 0; right: 0; z-index: 1000;"
+            "class", "checkbox-angry-unicorn"
           );
           const url = chrome.extension.getURL("assets/angry.png");
           element.setAttribute("src", url);
           document.querySelector("body").appendChild(element);
+
+          const audio = document.createElement(`audio`);
+          audio.setAttribute('src', chrome.extension.getURL("assets/roar.mp3"));
+          audio.play()
         });
       }
     }
