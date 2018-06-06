@@ -1,3 +1,12 @@
+@keyframes moveUnicorn {
+    from {
+        right: -430px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
 .unicorn-negative {
     background-color: rgb(255, 0, 0, 0.8) !important;
     color: #fff !important;
@@ -6,4 +15,13 @@
 .unicorn-positive {
     background-color: rgba(0, 255, 0, 0.8) !important;
     color: #fff !important;
+}
+
+.checkbox-angry-unicorn {
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    z-index: 9999999;
+    animation: moveUnicorn 2s ease-in-out forwards;
+    pointer-events: none;
 }
